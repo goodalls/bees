@@ -13,7 +13,6 @@ app.set('port', process.env.PORT || 3001);
 app.locals.title = 'bees-scrollytelling';
 
 app.get('/', (request, response) => {
-  response.sendfile(_dirname + 'client/build/index.html');
 });
 
 app.get('/api/v1/answers', (request, response) => {
