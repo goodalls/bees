@@ -7,7 +7,7 @@ const database = require('knex')(configuration);
 const path = require('path');
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'client-/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.set('port', process.env.PORT || 3001);
 app.locals.title = 'bees-scrollytelling';
