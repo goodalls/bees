@@ -6,12 +6,13 @@ const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
 
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.set('port', process.env.PORT || 3001);
 app.locals.title = 'bees-scrollytelling';
 
 app.get('/', (request, response) => {
-  response.send('Oh hey bees-scrollytelling time');
+  
 });
 
 app.get('/api/v1/answers', (request, response) => {
